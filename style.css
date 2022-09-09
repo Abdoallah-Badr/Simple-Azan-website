@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@200;400;500&display=swap');
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0%;
+  padding: 0%;
+}
+
+.contianer {
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+height: 100vh;
+position:relative;
+font-family: 'IBM Plex Sans Arabic', sans-serif;
+direction: rtl;
+}
+.contianer::before {
+  content: "";
+  position:absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: no-repeat url('/images/background.svg');
+  background-size: cover;
+}
+
+.set-location{
+  z-index: 10;
+  text-align: center;
+  background-color: rgba(184, 154, 166, 0.75) ;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.abled {
+  display: block;
+}
+.disabled{
+  display: none;
+}
+.set-location form{
+  display: flex;
+  flex-direction: column;
+}
+.set-location .label{
+  display: block;
+  
+}
+.saved-location > p {
+  display: block;
+  font-size: 19px;
+  font-weight: 500;
+  transition: all;
+  animation: 3s linear 1s infinite alternate;
+  background-color:  blanchedalmond;
+  border-radius: 18px;
+  padding: 10px;
+
+}
+.saved-location {
+  z-index: 10;
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 20%;
+}
+#remove-space p{
+  margin-right: 5%;
+  }
+  #remove-space{
+  background-color: rgb(253, 243, 243);
+  border-radius: 40px;
+  display: flex;
+  font-size: 15px;
+  padding: 2px;
+  width: 70%;
+}
+#remove-btn{
+  border: none;
+  color: #ba5050 ;
+  background-color: rgb(253, 243, 243);
+  padding: 3px;
+  height:20px;
+  border-radius: 40px;
+  
+  }
+  #remove-btn:hover{
+    color: #b76c6c ;
+    pointer-events: stroke;
+    
+  }
+.search-bar {
+  padding: 4px 8px;
+  height: 15px ;
+  border:none;
+  border-radius: 7px;
+  }
+.search-bar:focus{
+  border: none;
+
+}
+.form-label{
+  padding: 6px;
+  color: #322334;
+}
+.auto-btn{
+  width: 100%;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+
+}
+.search-btn,.auto-btn {
+  margin: 10px 0px;
+  height: 20px ;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(255, 242, 227);
+  font-size: 16px;
+  font-weight: 400;
+}
+.search-btn:hover {
+  margin: 10px 0px;
+  height: 20px ;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(255, 207, 186);
+}
+.auto-btn:hover{
+  background-color: rgb(255, 185, 185);
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  
+  
+}
+#times{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 60%;
+  min-width: 20em;
+  height: 20%;
+  background-color: blanchedalmond;
+  border-radius: 15px;
+  padding: 0 10px;
+  z-index: 10 ;  
+  position: relative;
+}
+
+.nextpray{
+  border: 5px solid #604b63;
+  border-color:linear-gradient(#604b63, #b89aa6) ;
+  background-color: rgb(255, 207, 186,0.4);
+  border-radius: 50px;
+  position: relative;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.1);
+  
+}
+
+.nextpray::after {
+  content: '';
+  top: -5%;
+  left: -15%;
+  right: -15%;
+  bottom: -5%;
+  flex-basis: 0%;
+}
+
+#times div{
+  width: 100px;
+  height: 80%;
+  border-radius: 8px;
+  padding: 5px;
+  display: flex;
+  flex-flow: column;
+  text-align:center ;
+  justify-content: space-evenly;
+  font-size: 18px;
+}
+
+.time {
+  display: block;
+  direction: ltr;
+}
+#remain-time {
+  display: flex;
+  position: relative;
+  height: 40px;
+  margin-top: 10px;
+}
+.remain-time-text{
+  display: none;
+  background-color: blanchedalmond;
+  box-shadow:0 0 10px 5px rgba(0,0,0,0.12);
+  font-weight: 400;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 18px;
+  width: max-content;
+  
+}
+@media (max-width: 667px) {
+  .contianer{
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    min-width: 350px;
+  }
+  .contianer >div {
+    margin: 40px 0px;
+  }
+  #remove-space{
+    margin-top: 7%;
+  }
+  #times {
+    flex-flow: column;
+    justify-content: space-between;
+    height: 60vh;
+    margin-top: 0px;
+    min-width:15em ; 
+    max-width:20em ; 
+  }
+  #times div {
+    width: 60%;
+    height: 20% ;
+  }
+}
