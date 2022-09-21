@@ -36,19 +36,22 @@ function dirGeocodingHandler(userLocation, countryCode) { // direct geolocation 
   return http;
 }
 
-function revGeocodingHandler(latitude, longitude) { // direct geolocation to return city name 
-  new Promise((resolve) => {
+function revGeocodingHandler(latitude, longitude) { // reverse geolocation to return city name 
+  // new Promise((resolve) => {
     http =
       `http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=1&appid=` +
       apiKey;
     fetch(http)
       .then((response) => response.json())
-      .then((data) => resolve(data[0].local_names.ar));
-  }).then((result) => {
-    setLocation.classList.replace("abled", "disabled");
-    savedLocationText.insertAdjacentHTML('afterbegin',`<p>مدينتك الحالية هي ${result}</p>`);
-  });
-}
+      .then((data) => data[0].local_names.ar)
+      // .then((data) => resolve(data[0].local_names.ar));
+      .then((result) => {
+        setLocation.classList.replace("abled", "disabled");
+        savedLocationText.insertAdjacentHTML('afterbegin',`<p>مدينتك الحالية هي ${result}</p>`);
+      });
+    }
+//   )
+// }
 
 window.addEventListener("load", () => {    // check if place saved perviously
   if (localStorage.length > 0) {
