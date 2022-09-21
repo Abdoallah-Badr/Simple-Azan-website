@@ -17,7 +17,6 @@ const removeSavedPlace = document.querySelector("#remove-btn");
 const apiKey = "df1a690443ab4c84ab2be29075ff8586";
 
 let userCity = undefined;
-
 const options = {           // geolocation options
   enableHighAccuracy: true,
   timeout: 5000,
@@ -37,21 +36,18 @@ function dirGeocodingHandler(userLocation, countryCode) { // direct geolocation 
 }
 
 function revGeocodingHandler(latitude, longitude) { // reverse geolocation to return city name 
-  // new Promise((resolve) => {
     http =
       `http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=1&appid=` +
       apiKey;
     fetch(http)
       .then((response) => response.json())
       .then((data) => data[0].local_names.ar)
-      // .then((data) => resolve(data[0].local_names.ar));
       .then((result) => {
         setLocation.classList.replace("abled", "disabled");
         savedLocationText.insertAdjacentHTML('afterbegin',`<p>مدينتك الحالية هي ${result}</p>`);
       });
     }
-//   )
-// }
+
 
 window.addEventListener("load", () => {    // check if place saved perviously
   if (localStorage.length > 0) {
@@ -242,8 +238,8 @@ function locationHandler(localStorageMethod, userInputMethod, navigatorMethod) {
             const nextprayMomDur = moment.duration(prayMomentObj[key]);
             remianingTimeText.parentElement.style.display = "block";
             remianingTimeText.textContent = `بقي على ${
-              nextPrayItem.querySelector(".pray-name").textContent}
-              ${nextprayMomDur.hours()} س : ${"   "}${nextprayMomDur.minutes()} د : ${"   "}${nextprayMomDur.seconds()} ث `;
+              nextPrayItem.querySelector(".pray-name").textContent}\xa0\xa0\xa0
+              ${nextprayMomDur.hours()} س : ${nextprayMomDur.minutes()} د : ${nextprayMomDur.seconds()} ث `;
           }
         }
       }

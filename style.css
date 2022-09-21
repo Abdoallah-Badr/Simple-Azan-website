@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@200;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic&family=Cairo:wght@200;400;500&display=swap');
 
 *, *:before, *:after {
   box-sizing: inherit;
@@ -76,9 +76,11 @@ direction: rtl;
   background-color: rgb(253, 243, 243);
   border-radius: 40px;
   display: flex;
+  align-items: center;
   font-size: 15px;
   padding: 2px;
-  width: 70%;
+  width: 165px;
+  height: 28px;
 }
 #remove-btn{
   border: none;
@@ -146,6 +148,7 @@ direction: rtl;
   border-radius: 15px;
   padding: 0 10px;
   z-index: 10 ;  
+  box-shadow:0 0 20px 6px rgba(0,0,0,0.15);
   position: relative;
 }
 
@@ -186,6 +189,7 @@ direction: rtl;
 }
 #remain-time {
   display: flex;
+  align-items: center;
   position: relative;
   height: 40px;
   margin-top: 10px;
@@ -194,10 +198,11 @@ direction: rtl;
   display: none;
   background-color: blanchedalmond;
   box-shadow:0 0 10px 5px rgba(0,0,0,0.12);
-  font-weight: 400;
+  font-weight: 500;
   padding: 10px;
   border-radius: 10px;
   font-size: 18px;
+  font-family: 'Cairo', sans-serif;
   width: max-content;
   
 }
