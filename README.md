@@ -17,8 +17,8 @@
 light-weight website to perform daily prayer times 
 
 ### Screenshots
-(./images/srceenshots/one.png)
-(./images/srceenshots/three.png)
+![full preview one!](./images/srceenshots/one.png)
+![full preview two!](./images/srceenshots/three.png)
 
 ### Links
 
