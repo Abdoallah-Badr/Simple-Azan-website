@@ -17,10 +17,10 @@
 light-weight website to perform daily prayer times 
 
 ### Screenshots
-[one.png](https://postimg.cc/TpTXX4jd)
-[two.png](https://postimg.cc/jnS0yWSW)
-[three.png](https://postimg.cc/HcTfCJ5S)
-[four.png](https://postimg.cc/zV46G2KH)
+(https://postimg.cc/TpTXX4jd)
+(https://postimg.cc/jnS0yWSW)
+(https://postimg.cc/HcTfCJ5S)
+(https://postimg.cc/zV46G2KH)
 
 ### Links
 
