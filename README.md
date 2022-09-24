@@ -17,10 +17,8 @@
 light-weight website to perform daily prayer times 
 
 ### Screenshots
-(https://postimg.cc/TpTXX4jd)
-(https://postimg.cc/jnS0yWSW)
-(https://postimg.cc/HcTfCJ5S)
-(https://postimg.cc/zV46G2KH)
+(./images/srceenshots/one.png)
+(./images/srceenshots/three.png)
 
 ### Links
 
@@ -38,6 +36,7 @@ light-weight website to perform daily prayer times
 #### css
 
 - pseudo class before and after and how use them
+- making desgin responsive with mobile
 
 #### js
 
