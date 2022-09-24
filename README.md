@@ -1,11 +1,8 @@
-# Frontend Mentor - Interactive comments section solution
-
-### the base project from frontend-mentor but i am add to it some some features as dynamic movement for comments and replies
+# simple azan app 
 
 ## Table of contents
 
 - [Overview](#overview)
-- [The challenge](#the-challenge)
 - [Screenshot](#screenshot)
 - [Links](#links)
 - [My process](#my-process)
@@ -13,22 +10,22 @@
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
+
 
 ## Overview
 
-### Screenshots
+light-weight website to perform daily prayer times 
 
-(./srceenshots/Screenshot%202022-06-07%20at%2014-58-37%20Interactive%20comments%20section.png)
-(./srceenshots/Screenshot%202022-06-07%20at%2014-58-58%20Interactive%20comments%20section.png)
-(./srceenshots/Screenshot%202022-06-07%20at%2015-04-23%20Interactive%20comments%20section.png)
-(./srceenshots/Screenshot%202022-06-07%20at%2015-05-08%20Interactive%20comments%20section.png)
+### Screenshots
+[one.png](https://postimg.cc/TpTXX4jd)
+[two.png](https://postimg.cc/jnS0yWSW)
+[three.png](https://postimg.cc/HcTfCJ5S)
+[four.png](https://postimg.cc/zV46G2KH)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Abdoallah-Badr/Interactive-comments-section-solution)
-- Live Site URL: [Add live site URL here](https://abdoallah-badr.github.io/Interactive-comments-section-solution/)
+- Solution URL: [Add solution URL here](https://github.com/Abdoallah-Badr/Simple-Azan-website)
+- Live Site URL: [Add live site URL here](https://abdoallah-badr.github.io/Simple-Azan-website/)
 
 ### Built with
 
@@ -38,39 +35,31 @@
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-#### html
-
-- learn more about class and id attributes and i should know how access to them
-  because every attributes represent a differnt kind of lists - learn more about
-- textarea and template tags
-
 #### css
 
-- more and more about flex and css grid
-- styling textarea
+- pseudo class before and after and how use them
 
 #### js
 
-- alot about DOM and how to access any element i want.
-- live DOM element list and differnce between nonlive list.
-- how make the elements dynamic affected with user actions.
-- how access to elements style and change it by js
+- alot about async javascript and promise functions 
+- local storage and how get and set from there  
+- using http methods and learn how recive response or send request
+- more and more array and object methods and how analysing data 
+- working with date by vanilla js and momentjs
+- using geocoding api to get location coordinates
+
 
 ### Continued development
 
-- i will resolve it by OOP approach
-- will be more clean in my code and more organized
+- upgrade website styling by adding more animations 
+- add autoplay azan sound 
 
 ### Useful resources
 
 - [MDN](https://developer.mozilla.org) - this is my new home i stay there more.
-- [traversy media](https://www.youtube.com/results?search_query=traversy+media) -remeber css flexbox and grid topics
-- [geeksforgeeks](https://www.geeksforgeeks.org/) - i found it useful for some topics i searched .
+- [moment js](https://momentjs.com/) 
+- [open weather api](https://openweathermap.org/api/geocoding-api)
 
 ## Author
 
-- Frontend Mentor - [@Abdoallah](https://www.frontendmentor.io/profile/Abdoallah-Badr)
+- Abdoallah badr 
