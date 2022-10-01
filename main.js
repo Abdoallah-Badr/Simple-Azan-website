@@ -205,9 +205,11 @@ function locationHandler(localStorageMethod, userInputMethod, navigatorMethod) {
 
           const pTime = prayModifing.fajr;
           fajrDiv.textContent = prayMod.fajr;
-          
           handlePrTime = moment(pTime,"HH:mm").add(1,"d");
-          const nowTime = moment(`${new Date().getHours()}:${new Date().getMinutes()}`,"HH:mm");
+          const nowTime = moment(   // make now time as a moment object
+          `${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
+          "HH:mm:ss"
+        );
           const duration = moment.duration(handlePrTime.diff(nowTime));
           prayDurObj["fajr"] = `${duration.get("h")}:${duration.get("m")}`;
           prayMomentObj["fajr"] = handlePrTime.diff(nowTime);
