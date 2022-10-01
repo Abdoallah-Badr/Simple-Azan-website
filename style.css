@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic&family=Cairo:wght@200;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic&family=Cairo:wght@200;400;500;600&display=swap');
 
 *, *:before, *:after {
   box-sizing: inherit;
@@ -11,7 +11,6 @@ display: flex;
 flex-direction: column;
 justify-content: space-around;
 align-items: center;
-height: 100vh;
 position:relative;
 font-family: 'IBM Plex Sans Arabic', sans-serif;
 direction: rtl;
@@ -22,7 +21,7 @@ direction: rtl;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: -10vh;
   background: no-repeat url('./images/background.svg');
   background-size: cover;
 }
@@ -162,7 +161,6 @@ direction: rtl;
   border-radius: 50px;
   position: relative;
   box-shadow:0 0 15px 4px rgba(0,0,0,0.1);
-  
 }
 
 .nextpray::after {
@@ -209,13 +207,23 @@ direction: rtl;
   width: max-content;
   
 }
+
+@media (min-width: 667px) {
+  .contianer{
+    height: 100vh;
+  }
+}
+
+
+
+
 @media (max-width: 667px) {
   .contianer{
-    height: 100%;
+    min-width: 300px;
+    min-height: 100vh;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
-    min-width: 350px;
   }
   .contianer >div {
     margin: 40px 0px;
@@ -226,13 +234,16 @@ direction: rtl;
   #times {
     flex-flow: column;
     justify-content: space-between;
-    height: 60vh;
+    min-height: 60vh;
     margin-top: 0px;
     min-width:15em ; 
-    max-width:20em ; 
+    max-width:18em ;
+    padding:25px 0px;
   }
   #times div {
-    width: 60%;
-    height: 20% ;
+    padding: 8%;
+  }
+  .pray-name{
+    margin-bottom: 7%;
   }
 }

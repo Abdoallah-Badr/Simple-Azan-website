@@ -13,6 +13,10 @@ const setLocation = document.getElementsByClassName("set-location")[0];
 const savedLocationDiv = document.querySelector(".saved-location");
 const savedLocationText = document.querySelector(".saved-location p");
 const removeSavedPlace = document.querySelector("#remove-btn");
+const nowDate = new Date()
+const tommorw = new Date(moment().add(1,"d"))
+
+fajrTime=undefined
 
 const apiKey = "df1a690443ab4c84ab2be29075ff8586";
 
@@ -135,21 +139,18 @@ function locationHandler(localStorageMethod, userInputMethod, navigatorMethod) {
         localStorage.setItem("longitude", JSON.stringify(crds.longitude));
       }
 
+        function prayesFunction(day,timeFormat) { 
+          return prayTimes.getTimes(day,[crds.latitude,crds.longitude],"auto",0,timeFormat);
+      }
+
       function showPrayTime() {   
         prayTimes.setMethod("Egypt");  // configre time claculation method
-        const pray = prayTimes.getTimes(
-          new Date(),
-          [crds.latitude,crds.longitude],
-          "auto",
-          0,
-          "12h"
-        );
-
-        fajrTime = pray.fajr;    
-        duhrTime = pray.dhuhr;
-        asrTime = pray.asr;
-        magribTime = pray.maghrib;
-        ishaTime = pray.isha;
+        const prayes = prayesFunction(nowDate,'12h')
+        fajrTime = prayes.fajr;    
+        duhrTime = prayes.dhuhr;
+        asrTime = prayes.asr;
+        magribTime = prayes.maghrib;
+        ishaTime = prayes.isha;
 
         fajrDiv.textContent = fajrTime;
         duhrDiv.textContent = duhrTime;
@@ -163,13 +164,7 @@ function locationHandler(localStorageMethod, userInputMethod, navigatorMethod) {
       const prayDurObj = {};
 
       function calcRemaingTime() {    // get the remaing time to pray time
-        const prayModifing = prayTimes.getTimes(
-          new Date(),
-          [crds.latitude,crds.longitude],
-          "auto",
-          0,
-          "24h"
-        );
+        const prayModifing = prayesFunction(nowDate,'24h')
         const prayMomentObj = {};
         let handlePrTime;
 
@@ -205,15 +200,12 @@ function locationHandler(localStorageMethod, userInputMethod, navigatorMethod) {
         //* calculate time between isha and next fajr *//
 
         if (nextPrayesKeys.length === 0) {    // check if the prayers of this day end
-          const prayModifing = prayTimes.getTimes(
-            new Date(),
-            [crds.latitude , crds.longitude ],
-            "auto",
-            0,
-            "24h"
-            );
+          const prayModifing = prayesFunction(tommorw,'24h') // 24h format to calculate
+          const prayMod = prayesFunction(tommorw,'12h')   // 12h format to preview
 
           const pTime = prayModifing.fajr;
+          fajrDiv.textContent = prayMod.fajr;
+          
           handlePrTime = moment(pTime,"HH:mm").add(1,"d");
           const nowTime = moment(`${new Date().getHours()}:${new Date().getMinutes()}`,"HH:mm");
           const duration = moment.duration(handlePrTime.diff(nowTime));

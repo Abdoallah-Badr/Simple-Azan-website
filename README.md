@@ -1,8 +1,11 @@
-# simple azan app 
+# Frontend Mentor - Interactive comments section solution
+
+### the base project from frontend-mentor but i am add to it some some features as dynamic movement for comments and replies
 
 ## Table of contents
 
 - [Overview](#overview)
+- [The challenge](#the-challenge)
 - [Screenshot](#screenshot)
 - [Links](#links)
 - [My process](#my-process)
@@ -10,15 +13,16 @@
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
-
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
-light-weight website to perform daily prayer times 
-
 ### Screenshots
+
 ![full preview one!](./images/srceenshots/one.png)
-![full preview two!](./images/srceenshots/three.png)
+![full preview two!](./images/srceenshots/two.png)
+![mobile preview !](./images/srceenshots/mobile.png)
 
 ### Links
 
@@ -40,25 +44,29 @@ light-weight website to perform daily prayer times
 
 #### js
 
-- alot about async javascript and promise functions 
-- local storage and how get and set from there  
+- alot about async javascript and promise functions
+- local storage and how get and set from there
 - using http methods and learn how recive response or send request
-- more and more array and object methods and how analysing data 
+- more and more array and object methods and how analysing data
 - working with date by vanilla js and momentjs
 - using geocoding api to get location coordinates
 
-
 ### Continued development
 
-- upgrade website styling by adding more animations 
-- add autoplay azan sound 
+- upgrade website styling by adding more animations
+- add autoplay azan sound
 
 ### Useful resources
 
 - [MDN](https://developer.mozilla.org) - this is my new home i stay there more.
-- [moment js](https://momentjs.com/) 
+- [PrayTime](http://praytime.info/#home)
+- [moment js](https://momentjs.com/)
 - [open weather api](https://openweathermap.org/api/geocoding-api)
 
 ## Author
 
-- Abdoallah badr 
+- Abdoallah badr
+
+## Author
+
+- Abdoallah badr - [@Abdoallah](https://www.linkedin.com/in/abdoallah-badr-42595919b/)
