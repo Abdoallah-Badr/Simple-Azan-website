@@ -1,6 +1,6 @@
-# Frontend Mentor - Interactive comments section solution
+# Simple Azan Website
 
-### the base project from frontend-mentor but i am add to it some some features as dynamic movement for comments and replies
+### website make you allowed to preview the prayes times in your city by simple interface
 
 ## Table of contents
 
