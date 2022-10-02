@@ -1,6 +1,6 @@
-# Simple Azan Website
+# Frontend Mentor - Interactive comments section solution
 
-### website make you allowed to preview the prayes times in your city by simple interface
+### the base project from frontend-mentor but i am add to it some some features as dynamic movement for comments and replies
 
 ## Table of contents
 
@@ -36,6 +36,10 @@
 - Vanilla Javascript
 
 ### What I learned
+
+#### HTML
+
+- meta tags which make website link show better
 
 #### css
 

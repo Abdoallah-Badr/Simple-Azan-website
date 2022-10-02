@@ -127,15 +127,12 @@ direction: rtl;
   justify-content: center;
 }
 .search-btn:hover {
-  margin: 10px 0px;
-  height: 20px ;
-  border: none;
-  border-radius: 10px;
   background-color: rgb(255, 207, 186);
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.1);
 }
 .auto-btn:hover{
   background-color: rgb(255, 185, 185);
-  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.1);
   
   
 }

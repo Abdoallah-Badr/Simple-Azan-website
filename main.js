@@ -61,12 +61,23 @@ window.addEventListener("load", () => {    // check if place saved perviously
 });
 
 let locationSerachHandler = new Promise((resolve, reject) => {     //
+
+  
   searchBtn.addEventListener("click", (event) => {
     event.preventDefault();
     userInput.userLocation = formCityBar.value;
     userInput.countryCode = formCityCode.value.toUpperCase();
     resolve(userInput);
+
   });
+  
+  formCityBar.addEventListener('keypress',(event)=>{
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      searchBtn.click()
+    }
+  })
+
 })
   .then((userInput) => {
     httpReq = dirGeocodingHandler(userInput.userLocation,userInput.countryCode);
