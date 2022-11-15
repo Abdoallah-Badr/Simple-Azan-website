@@ -1,6 +1,6 @@
-# Frontend Mentor - Interactive comments section solution
+# Simple Azan Website
+### preview prayers time of the day and the remainig time for the next pray
 
-### the base project from frontend-mentor but i am add to it some some features as dynamic movement for comments and replies
 
 ## Table of contents
 
@@ -46,7 +46,7 @@
 - pseudo class before and after and how use them
 - making desgin responsive with mobile
 
-#### js
+#### javascript
 
 - alot about async javascript and promise functions
 - local storage and how get and set from there
