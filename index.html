@@ -1,85 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <title>simple Azan website </title>
-    <meta name="description" content="تعرف على مواقيت الاذان في مدينتك والوقت المتبقى للصلاة التالية">
-    <link href="style.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    <title>simple Azan website</title>
+    <link rel="icon" href="./images/icon/muqit.png" />
+    <meta
+      name="description"
+      content="تعرف على مواقيت الاذان في مدينتك والوقت المتبقى للصلاة التالية"
+    />
+    <link href="style.css" rel="stylesheet" />
     <script type="text/javascript" src="PrayTimes.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
     <script src="main.js" defer></script>
 
     <!-- Google / Search Engine Tags -->
-    <meta itemprop="name" content="Simple Azan app">
-    <meta itemprop="description" content="تعرف على مواقيت الاذان في مدينتك والوقت المتبقى للصلاة التالية">
-    <meta itemprop="image" content="https://i.postimg.cc/Hx9xWSph/muqit.png">
+    <meta itemprop="name" content="Simple Azan app" />
+    <meta
+      itemprop="description"
+      content="تعرف على مواقيت الاذان في مدينتك والوقت المتبقى للصلاة التالية"
+    />
+    <meta itemprop="image" content="https://i.postimg.cc/Hx9xWSph/muqit.png" />
 
     <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://simple-azan.netlify.app/">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Simple Azan app">
-    <meta property="og:description" content="تعرف على مواقيت الاذان في مدينتك والوقت المتبقى للصلاة التالية">
-    <meta property="og:image" content="https://i.postimg.cc/Hx9xWSph/muqit.png">
-
-</head>
-<body>
+    <meta property="og:url" content="https://simple-azan.netlify.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Simple Azan app" />
+    <meta
+      property="og:description"
+      content="تعرف على مواقيت الاذان في مدينتك والوقت المتبقى للصلاة التالية"
+    />
+    <meta
+      property="og:image"
+      content="https://i.postimg.cc/Hx9xWSph/muqit.png"
+    />
+  </head>
+  <body>
     <div class="contianer">
-        <div class="set-location abled">
-            <form class="location-form">
-                <label class="form-label" for="city-name">  ابحث عن مدينتك </label>
-                <input class="search-bar" id="city-name" type="text" name="city-name"lang="ar"placeholder="ضع اسم مدينتك"autocomplete="country-name" required>
-                <label class="form-label" for="city-code">ضع كود الدولة </label>
-                <input class="search-bar" id="city-code" type="text" name="city-code" placeholder="مثال مصر : EG  (اختياري)"autocomplete="country" >
-                <input class="search-btn" type="button" value="بحث">
-            </form>
-            <p>أو</p>
-            <button class="auto-btn"> تحديد تلقائي </button>
+      <div class="set-location abled">
+        <form class="location-form">
+          <label class="form-label" for="city-name"> ابحث عن مدينتك </label>
+          <input
+            class="search-bar"
+            id="city-name"
+            type="text"
+            name="city-name"
+            lang="ar"
+            placeholder="ضع اسم مدينتك"
+            autocomplete="country-name"
+            required
+          />
+          <label class="form-label" for="city-code">ضع كود الدولة </label>
+          <input
+            class="search-bar"
+            id="city-code"
+            type="text"
+            name="city-code"
+            placeholder="مثال مصر : EG  (اختياري)"
+            autocomplete="country"
+          />
+          <input class="search-btn" type="button" value="بحث" />
+        </form>
+        <p>أو</p>
+        <button class="auto-btn">تحديد تلقائي</button>
+        <div class="daylight-container">
+          <div class="checkbox-daylight">
+            <input class="yep" id="check-daylight" type="checkbox" />
+            <label for="check-daylight"></label>
+          </div>
+          <p id="daylight-text">التوقيت الصيفي</p>
         </div>
-        <div class="saved-location">
-            <p> </p>
-            <div id="remove-space">
-                <span id="remove-btn">
-                    <i  class="fa-solid fa-circle-xmark fa-xl" ></i>
-                </span>
-                <p>حذف موقعك الحالي</p>
-            </div>
+      </div>
+      <div class="saved-location">
+        <p></p>
+        <div id="remove-space">
+          <span id="remove-btn">
+            <i class="fa-solid fa-circle-xmark fa-xl"></i>
+          </span>
+          <p>حذف موقعك الحالي</p>
         </div>
+      </div>
 
-        <div id="times">
-            <div class="fajr">
-                <p class="pray-name">صلاة الفجر</p> 
-                <p class="time"></p>
-            </div>
-            <div class="dhuhr"> 
-                <p class="pray-name">صلاة الظهر</p> 
-                <p class="time"></p>
-            </div>
-            <div class="asr">
-                <p class="pray-name">صلاة العصر</p> 
-                <p class="time"></p>
-            </div>
-            <div class="maghrib">
-                <p class="pray-name">صلاة المغرب</p> 
-                <p class="time"></p>
-            </div>
-            <div class="isha">
-                <p class="pray-name">صلاة العشاء</p> 
-                <p class="time"></p>
-            </div>
+      <div id="times">
+        <div class="fajr">
+          <p class="pray-name">صلاة الفجر</p>
+          <p class="time"></p>
         </div>
-        <div id="remain-time">
-            <div class="remain-time-text">
-                <p></p>
-            </div>
-            <div class="remain-time-progress">
-
-            </div>
+        <div class="dhuhr">
+          <p class="pray-name">صلاة الظهر</p>
+          <p class="time"></p>
         </div>
-
+        <div class="asr">
+          <p class="pray-name">صلاة العصر</p>
+          <p class="time"></p>
+        </div>
+        <div class="maghrib">
+          <p class="pray-name">صلاة المغرب</p>
+          <p class="time"></p>
+        </div>
+        <div class="isha">
+          <p class="pray-name">صلاة العشاء</p>
+          <p class="time"></p>
+        </div>
+      </div>
+      <div id="remain-time">
+        <div class="remain-time-text">
+          <p></p>
+        </div>
+        <div class="remain-time-progress"></div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
