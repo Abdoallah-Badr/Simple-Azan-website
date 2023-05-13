@@ -1,6 +1,6 @@
-# Frontend Mentor - Interactive comments section solution
+# Simple Azan App
 
-### the base project from frontend-mentor but i am add to it some some features as dynamic movement for comments and replies
+### Website preview prayer times of day and the time remaining for the next pray.
 
 ## Table of contents
 
